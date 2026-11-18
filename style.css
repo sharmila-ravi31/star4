@@ -1,0 +1,161 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10152f, #272b59);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+    background: #1d2345;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px #0008;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #ffd43b;
+}
+
+header p {
+    color: #d7dcff;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stats div {
+    background: #303966;
+    padding: 12px 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(#101a3a, #263f72);
+    border: 3px solid #6578cb;
+    border-radius: 12px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: #070d20df;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay h2 {
+    color: #ffd43b;
+    font-size: 30px;
+}
+
+.overlay p {
+    color: #fff;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #ffd43b;
+    color: #17203d;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #ffea85;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.controls,
+.settings {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.instructions {
+    margin-top: 22px;
+    line-height: 1.8;
+    color: #d7dcff;
+}
+
+.instructions h3 {
+    color: #ffd43b;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    button {
+        padding: 10px 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}

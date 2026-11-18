@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Catcher Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>⭐ Star Catcher</h1>
+            <p>Catch the falling stars and reach 300 points!</p>
+        </header>
+
+        <div class="stats">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Lives: <span id="lives">3</span></div>
+            <div>Best: <span id="best">0</span></div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+            <div class="overlay" id="overlay">
+                <h2 id="message">Star Catcher</h2>
+                <p id="description">
+                    Catch stars and avoid missing them!
+                </p>
+                <button id="startBtn">Start Game</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="leftBtn">⬅ Left</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="rightBtn">Right ➡</button>
+        </div>
+
+        <div class="settings">
+            <button id="soundBtn">Sound: ON</button>
+            <button id="motionBtn">Reduced Motion: OFF</button>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <p>Use ← → arrow keys or A / D to move.</p>
+            <p>Press Space to pause or resume.</p>
+            <p>Catch stars to earn 10 points.</p>
+            <p>Reach 300 points to win!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
